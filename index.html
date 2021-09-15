@@ -76,5 +76,26 @@
                 <td> 200 </td>
             </tr>
         </table>
+
+        <hr>
+
+        <h3>Algorithm</h3>
+
+        <blockquote site=" https://en.wikipedia.org/wiki/Closest_pair_of_points_problem"> The closest pair of points problem or closest pair problem is a problem of computational geometry.The closest pair problem for points in the Euclidean plane was among the first geometric problems that were treated at the origins of the systematic study of the computational complexity of geometric algorithms.A naive algorithm of finding distances between all pairs of points in a space of dimension d and selecting the minimum requires O(n2) time.
+       </blockquote>
+<a href=https://en.wikipedia.org/wiki/Closest_pair_of_points_problem>Algorithm</a>
+        <pre>
+           double mindist;
+        pair<int, int> best_pair;
+        
+        void upd_ans(const pt & a, const pt & b) {
+            double dist = sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y));
+            if (dist < mindist) {
+                mindist = dist;
+                best_pair = {a.id, b.id};
+            }
+        }
+    </pre>
+
             </body>
 </html>
